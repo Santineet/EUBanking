@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="KGk-i7-Jjw" customClass="PaymentAmountCell" customModule="EUBanking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P01-wF-NTM">
+                        <rect key="frame" x="16" y="0.0" width="288" height="92"/>
+                        <color key="backgroundColor" name="LightBlue"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="92" id="3LT-A5-tE5"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaM-ks-yhr">
+                        <rect key="frame" x="14" y="12" width="292" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="К оплате" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgN-VA-08H">
+                                <rect key="frame" x="12" y="8" width="52.5" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="hKU-yM-x4U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="Black.5"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="32 483.88 ₸" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Zl-aA-A2f">
+                                <rect key="frame" x="12" y="30" width="268" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vgN-VA-08H" firstAttribute="leading" secondItem="IaM-ks-yhr" secondAttribute="leading" constant="12" id="F3l-Vy-ajL"/>
+                            <constraint firstItem="7Zl-aA-A2f" firstAttribute="top" secondItem="vgN-VA-08H" secondAttribute="bottom" constant="8" id="Pht-zO-Kyb"/>
+                            <constraint firstItem="vgN-VA-08H" firstAttribute="top" secondItem="IaM-ks-yhr" secondAttribute="top" constant="8" id="T4g-E0-gWi"/>
+                            <constraint firstItem="7Zl-aA-A2f" firstAttribute="leading" secondItem="IaM-ks-yhr" secondAttribute="leading" constant="12" id="YtA-FG-HGG"/>
+                            <constraint firstAttribute="bottom" secondItem="7Zl-aA-A2f" secondAttribute="bottom" constant="8" id="hCM-v2-mYd"/>
+                            <constraint firstAttribute="trailing" secondItem="7Zl-aA-A2f" secondAttribute="trailing" constant="12" id="iRj-tX-5OK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuss">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthh">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorr">
+                                <color key="value" name="GrayLight"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="P01-wF-NTM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Df-cP-jPn"/>
+                    <constraint firstItem="IaM-ks-yhr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="2Fp-Ym-7LI"/>
+                    <constraint firstAttribute="trailing" secondItem="P01-wF-NTM" secondAttribute="trailing" constant="16" id="FeT-1L-xPb"/>
+                    <constraint firstItem="P01-wF-NTM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="G7F-Px-hfp"/>
+                    <constraint firstItem="IaM-ks-yhr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Nvw-gm-xpU"/>
+                    <constraint firstAttribute="bottom" secondItem="IaM-ks-yhr" secondAttribute="bottom" constant="12" id="Re6-mv-dsr"/>
+                    <constraint firstAttribute="trailing" secondItem="IaM-ks-yhr" secondAttribute="trailing" constant="14" id="eHg-I5-ngV"/>
+                    <constraint firstAttribute="bottom" secondItem="P01-wF-NTM" secondAttribute="bottom" id="lSV-SQ-zPO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="111.59420289855073" y="134.93303571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Black.5">
+            <color red="0.050980392156862744" green="0.12941176470588237" blue="0.22745098039215686" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayLight">
+            <color red="0.8901960784313725" green="0.89803921568627454" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightBlue">
+            <color red="0.97647058823529409" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
