@@ -13,8 +13,8 @@
 		2E9C120025FFC05F00A5E306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C11FE25FFC05F00A5E306 /* LaunchScreen.storyboard */; };
 		2E9C120D25FFC09700A5E306 /* PaymentsFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C120C25FFC09700A5E306 /* PaymentsFlow.storyboard */; };
 		2E9C121125FFC17800A5E306 /* PaymentsConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C121025FFC17800A5E306 /* PaymentsConfirmationViewController.swift */; };
-		2E9C121925FFC27100A5E306 /* PaidServiceTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C121725FFC27100A5E306 /* PaidServiceTitleCell.swift */; };
-		2E9C121A25FFC27100A5E306 /* PaidServiceTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C121825FFC27100A5E306 /* PaidServiceTitleCell.xib */; };
+		2E9C121925FFC27100A5E306 /* PaidServiceCollapseControllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C121725FFC27100A5E306 /* PaidServiceCollapseControllCell.swift */; };
+		2E9C121A25FFC27100A5E306 /* PaidServiceCollapseControllCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C121825FFC27100A5E306 /* PaidServiceCollapseControllCell.xib */; };
 		2E9C123125FFC66F00A5E306 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C123025FFC66F00A5E306 /* UIView+Extension.swift */; };
 		2E9C123625FFC95F00A5E306 /* ConsumptionCalculationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C123425FFC95F00A5E306 /* ConsumptionCalculationCell.swift */; };
 		2E9C123725FFC95F00A5E306 /* ConsumptionCalculationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C123525FFC95F00A5E306 /* ConsumptionCalculationCell.xib */; };
@@ -47,8 +47,8 @@
 		2E9C120125FFC05F00A5E306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9C120C25FFC09700A5E306 /* PaymentsFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentsFlow.storyboard; sourceTree = "<group>"; };
 		2E9C121025FFC17800A5E306 /* PaymentsConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsConfirmationViewController.swift; sourceTree = "<group>"; };
-		2E9C121725FFC27100A5E306 /* PaidServiceTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidServiceTitleCell.swift; sourceTree = "<group>"; };
-		2E9C121825FFC27100A5E306 /* PaidServiceTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaidServiceTitleCell.xib; sourceTree = "<group>"; };
+		2E9C121725FFC27100A5E306 /* PaidServiceCollapseControllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidServiceCollapseControllCell.swift; sourceTree = "<group>"; };
+		2E9C121825FFC27100A5E306 /* PaidServiceCollapseControllCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaidServiceCollapseControllCell.xib; sourceTree = "<group>"; };
 		2E9C123025FFC66F00A5E306 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2E9C123425FFC95F00A5E306 /* ConsumptionCalculationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionCalculationCell.swift; sourceTree = "<group>"; };
 		2E9C123525FFC95F00A5E306 /* ConsumptionCalculationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsumptionCalculationCell.xib; sourceTree = "<group>"; };
@@ -117,9 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				2E9C120C25FFC09700A5E306 /* PaymentsFlow.storyboard */,
+				2E9C12682600636B00A5E306 /* PaymentsConfirmationViewModel.swift */,
 				2E9C121025FFC17800A5E306 /* PaymentsConfirmationViewController.swift */,
 				2E9C121625FFC1FD00A5E306 /* Components */,
-				2E9C12682600636B00A5E306 /* PaymentsConfirmationViewModel.swift */,
 			);
 			path = "Payments Flow";
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 		2E9C121625FFC1FD00A5E306 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2E9C121725FFC27100A5E306 /* PaidServiceTitleCell.swift */,
-				2E9C121825FFC27100A5E306 /* PaidServiceTitleCell.xib */,
+				2E9C121725FFC27100A5E306 /* PaidServiceCollapseControllCell.swift */,
+				2E9C121825FFC27100A5E306 /* PaidServiceCollapseControllCell.xib */,
 				2E9C123425FFC95F00A5E306 /* ConsumptionCalculationCell.swift */,
 				2E9C123525FFC95F00A5E306 /* ConsumptionCalculationCell.xib */,
 				2E9C123B25FFD85E00A5E306 /* IncludeOverpaymentCell.swift */,
@@ -261,7 +261,7 @@
 				2E9C123E25FFD85E00A5E306 /* IncludeOverpaymentCell.xib in Resources */,
 				2E9C120025FFC05F00A5E306 /* LaunchScreen.storyboard in Resources */,
 				2E9C11FD25FFC05F00A5E306 /* Assets.xcassets in Resources */,
-				2E9C121A25FFC27100A5E306 /* PaidServiceTitleCell.xib in Resources */,
+				2E9C121A25FFC27100A5E306 /* PaidServiceCollapseControllCell.xib in Resources */,
 				2E9C124325FFDA7B00A5E306 /* PaymentAmountCell.xib in Resources */,
 				2E9C120D25FFC09700A5E306 /* PaymentsFlow.storyboard in Resources */,
 			);
@@ -286,7 +286,7 @@
 				2E9C124225FFDA7B00A5E306 /* PaymentAmountCell.swift in Sources */,
 				2E9C125A2600529400A5E306 /* UITableViewCell+Convinience.swift in Sources */,
 				2E9C12562600529400A5E306 /* UITableView+Convinience.swift in Sources */,
-				2E9C121925FFC27100A5E306 /* PaidServiceTitleCell.swift in Sources */,
+				2E9C121925FFC27100A5E306 /* PaidServiceCollapseControllCell.swift in Sources */,
 				2E9C12592600529400A5E306 /* TableDisplay.swift in Sources */,
 				2E9C12602600529400A5E306 /* UICollectionReusableView+Convenience.swift in Sources */,
 				2E9C123125FFC66F00A5E306 /* UIView+Extension.swift in Sources */,
