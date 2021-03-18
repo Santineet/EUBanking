@@ -11,6 +11,10 @@
 		2E0897ED26012F4500F3862C /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0897EB26012F4500F3862C /* InvoiceTableViewCell.swift */; };
 		2E0897EE26012F4500F3862C /* InvoiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0897EC26012F4500F3862C /* InvoiceTableViewCell.xib */; };
 		2E0897F12601327600F3862C /* ContentSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0897F02601327600F3862C /* ContentSizedTableView.swift */; };
+		2E0898342603BEB200F3862C /* Invoice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E0898332603BEB200F3862C /* Invoice.storyboard */; };
+		2E0898372603BF0F00F3862C /* InvoicePaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0898362603BF0F00F3862C /* InvoicePaymentViewModel.swift */; };
+		2E0898592603CBC600F3862C /* UITableView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0898572603CBC600F3862C /* UITableView+Helper.swift */; };
+		2E08985A2603CBC600F3862C /* UITableViewCell+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0898582603CBC600F3862C /* UITableViewCell+Helper.swift */; };
 		2E9C11F425FFC05D00A5E306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C11F325FFC05D00A5E306 /* AppDelegate.swift */; };
 		2E9C11F625FFC05D00A5E306 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C11F525FFC05D00A5E306 /* SceneDelegate.swift */; };
 		2E9C11FD25FFC05F00A5E306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C11FC25FFC05F00A5E306 /* Assets.xcassets */; };
@@ -47,6 +51,10 @@
 		2E0897EB26012F4500F3862C /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
 		2E0897EC26012F4500F3862C /* InvoiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceTableViewCell.xib; sourceTree = "<group>"; };
 		2E0897F02601327600F3862C /* ContentSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizedTableView.swift; sourceTree = "<group>"; };
+		2E0898332603BEB200F3862C /* Invoice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Invoice.storyboard; sourceTree = "<group>"; };
+		2E0898362603BF0F00F3862C /* InvoicePaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicePaymentViewModel.swift; sourceTree = "<group>"; };
+		2E0898572603CBC600F3862C /* UITableView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Helper.swift"; sourceTree = "<group>"; };
+		2E0898582603CBC600F3862C /* UITableViewCell+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helper.swift"; sourceTree = "<group>"; };
 		2E9C11F025FFC05D00A5E306 /* EUBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EUBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9C11F325FFC05D00A5E306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9C11F525FFC05D00A5E306 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +102,8 @@
 		2E0897E9260125D500F3862C /* Invoice payment */ = {
 			isa = PBXGroup;
 			children = (
+				2E0898332603BEB200F3862C /* Invoice.storyboard */,
+				2E0898362603BF0F00F3862C /* InvoicePaymentViewModel.swift */,
 				2E0897E62601251A00F3862C /* InvoicePaymentViewController.swift */,
 				2E0897EB26012F4500F3862C /* InvoiceTableViewCell.swift */,
 				2E0897EC26012F4500F3862C /* InvoiceTableViewCell.xib */,
@@ -189,6 +199,8 @@
 		2E9C122F25FFC65F00A5E306 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2E0898572603CBC600F3862C /* UITableView+Helper.swift */,
+				2E0898582603CBC600F3862C /* UITableViewCell+Helper.swift */,
 				2E9C123025FFC66F00A5E306 /* UIView+Extension.swift */,
 				2E9C1262260053FA00A5E306 /* UIColor+Extension.swift */,
 			);
@@ -282,6 +294,7 @@
 				2E9C123E25FFD85E00A5E306 /* IncludeOverpaymentCell.xib in Resources */,
 				2E9C120025FFC05F00A5E306 /* LaunchScreen.storyboard in Resources */,
 				2E9C11FD25FFC05F00A5E306 /* Assets.xcassets in Resources */,
+				2E0898342603BEB200F3862C /* Invoice.storyboard in Resources */,
 				2E9C121A25FFC27100A5E306 /* PaidServiceCollapseControllCell.xib in Resources */,
 				2E9C124325FFDA7B00A5E306 /* PaymentAmountCell.xib in Resources */,
 				2E9C120D25FFC09700A5E306 /* PaymentsFlow.storyboard in Resources */,
@@ -307,6 +320,7 @@
 				2E9C11F425FFC05D00A5E306 /* AppDelegate.swift in Sources */,
 				2E9C124225FFDA7B00A5E306 /* PaymentAmountCell.swift in Sources */,
 				2E9C125A2600529400A5E306 /* UITableViewCell+Convinience.swift in Sources */,
+				2E0898592603CBC600F3862C /* UITableView+Helper.swift in Sources */,
 				2E9C12562600529400A5E306 /* UITableView+Convinience.swift in Sources */,
 				2E9C121925FFC27100A5E306 /* PaidServiceCollapseControllCell.swift in Sources */,
 				2E9C12592600529400A5E306 /* TableDisplay.swift in Sources */,
@@ -314,8 +328,10 @@
 				2E9C123125FFC66F00A5E306 /* UIView+Extension.swift in Sources */,
 				2E9C12572600529400A5E306 /* UITableViewHeaderFooterView+Convinience.swift in Sources */,
 				2E9C11F625FFC05D00A5E306 /* SceneDelegate.swift in Sources */,
+				2E0898372603BF0F00F3862C /* InvoicePaymentViewModel.swift in Sources */,
 				2E9C125C2600529400A5E306 /* UICollectionReusableView+Autosizing.swift in Sources */,
 				2E9C12582600529400A5E306 /* TableShimmerCell.swift in Sources */,
+				2E08985A2603CBC600F3862C /* UITableViewCell+Helper.swift in Sources */,
 				2E9C125E2600529400A5E306 /* CollectionShimmerCell.swift in Sources */,
 				2E0897ED26012F4500F3862C /* InvoiceTableViewCell.swift in Sources */,
 				2E9C1263260053FA00A5E306 /* UIColor+Extension.swift in Sources */,

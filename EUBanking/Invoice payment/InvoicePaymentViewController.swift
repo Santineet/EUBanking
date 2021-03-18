@@ -21,22 +21,36 @@ enum InvoiceParameters {
     case total(Int)
 }
 
-struct InvoiceViewModel {
+struct InvoiceCellViewModel {
     let id: Int
     var isSelected = false
     let icon: UIImage
     let title: String
     let color: UIColor // Добавь сюда градиент
-    let parametres: [InvoiceParameters] = []
+    let parametres: [InvoiceParameters]
     let showInvoice: Bool
 }
 
 class InvoicePaymentViewController: UIViewController {
     
-    var viewModels: [InvoiceViewModel] = []
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            tableView.estimatedRowHeight = 56
+            tableView.rowHeight = UITableView.automaticDimension
+        }
+    }
+    
+    private var invoices: [InvoiceCellViewModel] = []
+    private let viewModel = InvoicePaymentViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.registerNib(forCellClass: InvoiceTableViewCell.self)
+
+        invoices = viewModel.getInvoices()
+        tableView.reloadData()
         
+
     }
     
     func getTotal() -> Int {
@@ -52,14 +66,13 @@ extension InvoicePaymentViewController: UITableViewDelegate {
 
 extension InvoicePaymentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModels.count
+        invoices.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+        let cell = InvoiceTableViewCell.dequeue(from: tableView, for: indexPath)!
+        cell.setupCell(invoice: invoices[indexPath.row])
         return cell
     }
-    
-    
-    
+
 }
