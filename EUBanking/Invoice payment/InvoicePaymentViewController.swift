@@ -12,7 +12,7 @@ enum InvoiceParameters {
         let startValue: Int
         let endValue: Int
         let unitTitle: String
-        let total: String
+        let total: Int
     }
     case invoice(Int)
     case period(PeriodModel)
@@ -37,6 +37,7 @@ class InvoicePaymentViewController: UIViewController {
         didSet {
             tableView.estimatedRowHeight = 56
             tableView.rowHeight = UITableView.automaticDimension
+            tableView.registerNib(forCellClass: InvoiceTableViewCell.self)
         }
     }
     
@@ -45,7 +46,6 @@ class InvoicePaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerNib(forCellClass: InvoiceTableViewCell.self)
 
         invoices = viewModel.getInvoices()
         tableView.reloadData()

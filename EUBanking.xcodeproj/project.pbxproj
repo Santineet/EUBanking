@@ -24,12 +24,12 @@
 		2E9C121925FFC27100A5E306 /* PaidServiceCollapseControllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C121725FFC27100A5E306 /* PaidServiceCollapseControllCell.swift */; };
 		2E9C121A25FFC27100A5E306 /* PaidServiceCollapseControllCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C121825FFC27100A5E306 /* PaidServiceCollapseControllCell.xib */; };
 		2E9C123125FFC66F00A5E306 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C123025FFC66F00A5E306 /* UIView+Extension.swift */; };
-		2E9C123625FFC95F00A5E306 /* ConsumptionCalculationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C123425FFC95F00A5E306 /* ConsumptionCalculationCell.swift */; };
-		2E9C123725FFC95F00A5E306 /* ConsumptionCalculationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C123525FFC95F00A5E306 /* ConsumptionCalculationCell.xib */; };
-		2E9C123D25FFD85E00A5E306 /* IncludeOverpaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C123B25FFD85E00A5E306 /* IncludeOverpaymentCell.swift */; };
-		2E9C123E25FFD85E00A5E306 /* IncludeOverpaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C123C25FFD85E00A5E306 /* IncludeOverpaymentCell.xib */; };
-		2E9C124225FFDA7B00A5E306 /* PaymentAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C124025FFDA7B00A5E306 /* PaymentAmountCell.swift */; };
-		2E9C124325FFDA7B00A5E306 /* PaymentAmountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C124125FFDA7B00A5E306 /* PaymentAmountCell.xib */; };
+		2E9C123625FFC95F00A5E306 /* PeriodCalculationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C123425FFC95F00A5E306 /* PeriodCalculationTableViewCell.swift */; };
+		2E9C123725FFC95F00A5E306 /* PeriodCalculationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C123525FFC95F00A5E306 /* PeriodCalculationTableViewCell.xib */; };
+		2E9C123D25FFD85E00A5E306 /* DebitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C123B25FFD85E00A5E306 /* DebitTableViewCell.swift */; };
+		2E9C123E25FFD85E00A5E306 /* DebitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C123C25FFD85E00A5E306 /* DebitTableViewCell.xib */; };
+		2E9C124225FFDA7B00A5E306 /* TotalAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C124025FFDA7B00A5E306 /* TotalAmountTableViewCell.swift */; };
+		2E9C124325FFDA7B00A5E306 /* TotalAmountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C124125FFDA7B00A5E306 /* TotalAmountTableViewCell.xib */; };
 		2E9C12562600529400A5E306 /* UITableView+Convinience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C124A2600529400A5E306 /* UITableView+Convinience.swift */; };
 		2E9C12572600529400A5E306 /* UITableViewHeaderFooterView+Convinience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C124B2600529400A5E306 /* UITableViewHeaderFooterView+Convinience.swift */; };
 		2E9C12582600529400A5E306 /* TableShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C124C2600529400A5E306 /* TableShimmerCell.swift */; };
@@ -66,12 +66,12 @@
 		2E9C121725FFC27100A5E306 /* PaidServiceCollapseControllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidServiceCollapseControllCell.swift; sourceTree = "<group>"; };
 		2E9C121825FFC27100A5E306 /* PaidServiceCollapseControllCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaidServiceCollapseControllCell.xib; sourceTree = "<group>"; };
 		2E9C123025FFC66F00A5E306 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		2E9C123425FFC95F00A5E306 /* ConsumptionCalculationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionCalculationCell.swift; sourceTree = "<group>"; };
-		2E9C123525FFC95F00A5E306 /* ConsumptionCalculationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsumptionCalculationCell.xib; sourceTree = "<group>"; };
-		2E9C123B25FFD85E00A5E306 /* IncludeOverpaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncludeOverpaymentCell.swift; sourceTree = "<group>"; };
-		2E9C123C25FFD85E00A5E306 /* IncludeOverpaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncludeOverpaymentCell.xib; sourceTree = "<group>"; };
-		2E9C124025FFDA7B00A5E306 /* PaymentAmountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAmountCell.swift; sourceTree = "<group>"; };
-		2E9C124125FFDA7B00A5E306 /* PaymentAmountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentAmountCell.xib; sourceTree = "<group>"; };
+		2E9C123425FFC95F00A5E306 /* PeriodCalculationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodCalculationTableViewCell.swift; sourceTree = "<group>"; };
+		2E9C123525FFC95F00A5E306 /* PeriodCalculationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeriodCalculationTableViewCell.xib; sourceTree = "<group>"; };
+		2E9C123B25FFD85E00A5E306 /* DebitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebitTableViewCell.swift; sourceTree = "<group>"; };
+		2E9C123C25FFD85E00A5E306 /* DebitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DebitTableViewCell.xib; sourceTree = "<group>"; };
+		2E9C124025FFDA7B00A5E306 /* TotalAmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAmountTableViewCell.swift; sourceTree = "<group>"; };
+		2E9C124125FFDA7B00A5E306 /* TotalAmountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalAmountTableViewCell.xib; sourceTree = "<group>"; };
 		2E9C124A2600529400A5E306 /* UITableView+Convinience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Convinience.swift"; sourceTree = "<group>"; };
 		2E9C124B2600529400A5E306 /* UITableViewHeaderFooterView+Convinience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Convinience.swift"; sourceTree = "<group>"; };
 		2E9C124C2600529400A5E306 /* TableShimmerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableShimmerCell.swift; sourceTree = "<group>"; };
@@ -108,8 +108,22 @@
 				2E0897EB26012F4500F3862C /* InvoiceTableViewCell.swift */,
 				2E0897EC26012F4500F3862C /* InvoiceTableViewCell.xib */,
 				2E0897F02601327600F3862C /* ContentSizedTableView.swift */,
+				2E0898622603D92100F3862C /* Parametre cells */,
 			);
 			path = "Invoice payment";
+			sourceTree = "<group>";
+		};
+		2E0898622603D92100F3862C /* Parametre cells */ = {
+			isa = PBXGroup;
+			children = (
+				2E9C123425FFC95F00A5E306 /* PeriodCalculationTableViewCell.swift */,
+				2E9C123525FFC95F00A5E306 /* PeriodCalculationTableViewCell.xib */,
+				2E9C123B25FFD85E00A5E306 /* DebitTableViewCell.swift */,
+				2E9C123C25FFD85E00A5E306 /* DebitTableViewCell.xib */,
+				2E9C124025FFDA7B00A5E306 /* TotalAmountTableViewCell.swift */,
+				2E9C124125FFDA7B00A5E306 /* TotalAmountTableViewCell.xib */,
+			);
+			path = "Parametre cells";
 			sourceTree = "<group>";
 		};
 		2E9C11E725FFC05D00A5E306 = {
@@ -186,12 +200,6 @@
 			children = (
 				2E9C121725FFC27100A5E306 /* PaidServiceCollapseControllCell.swift */,
 				2E9C121825FFC27100A5E306 /* PaidServiceCollapseControllCell.xib */,
-				2E9C123425FFC95F00A5E306 /* ConsumptionCalculationCell.swift */,
-				2E9C123525FFC95F00A5E306 /* ConsumptionCalculationCell.xib */,
-				2E9C123B25FFD85E00A5E306 /* IncludeOverpaymentCell.swift */,
-				2E9C123C25FFD85E00A5E306 /* IncludeOverpaymentCell.xib */,
-				2E9C124025FFDA7B00A5E306 /* PaymentAmountCell.swift */,
-				2E9C124125FFDA7B00A5E306 /* PaymentAmountCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -289,14 +297,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9C123725FFC95F00A5E306 /* ConsumptionCalculationCell.xib in Resources */,
+				2E9C123725FFC95F00A5E306 /* PeriodCalculationTableViewCell.xib in Resources */,
 				2E0897EE26012F4500F3862C /* InvoiceTableViewCell.xib in Resources */,
-				2E9C123E25FFD85E00A5E306 /* IncludeOverpaymentCell.xib in Resources */,
+				2E9C123E25FFD85E00A5E306 /* DebitTableViewCell.xib in Resources */,
 				2E9C120025FFC05F00A5E306 /* LaunchScreen.storyboard in Resources */,
 				2E9C11FD25FFC05F00A5E306 /* Assets.xcassets in Resources */,
 				2E0898342603BEB200F3862C /* Invoice.storyboard in Resources */,
 				2E9C121A25FFC27100A5E306 /* PaidServiceCollapseControllCell.xib in Resources */,
-				2E9C124325FFDA7B00A5E306 /* PaymentAmountCell.xib in Resources */,
+				2E9C124325FFDA7B00A5E306 /* TotalAmountTableViewCell.xib in Resources */,
 				2E9C120D25FFC09700A5E306 /* PaymentsFlow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,15 +318,15 @@
 			files = (
 				2E9C125B2600529400A5E306 /* UICollectionViewFlowLayout+ProductGrid.swift in Sources */,
 				2E0897F12601327600F3862C /* ContentSizedTableView.swift in Sources */,
-				2E9C123625FFC95F00A5E306 /* ConsumptionCalculationCell.swift in Sources */,
+				2E9C123625FFC95F00A5E306 /* PeriodCalculationTableViewCell.swift in Sources */,
 				2E9C12692600636B00A5E306 /* PaymentsConfirmationViewModel.swift in Sources */,
 				2E9C125F2600529400A5E306 /* UICollectionView+Convinience.swift in Sources */,
-				2E9C123D25FFD85E00A5E306 /* IncludeOverpaymentCell.swift in Sources */,
+				2E9C123D25FFD85E00A5E306 /* DebitTableViewCell.swift in Sources */,
 				2E9C121125FFC17800A5E306 /* PaymentsConfirmationViewController.swift in Sources */,
 				2E9C1266260057B600A5E306 /* ContainerView.swift in Sources */,
 				2E9C125D2600529400A5E306 /* CollectionDisplay.swift in Sources */,
 				2E9C11F425FFC05D00A5E306 /* AppDelegate.swift in Sources */,
-				2E9C124225FFDA7B00A5E306 /* PaymentAmountCell.swift in Sources */,
+				2E9C124225FFDA7B00A5E306 /* TotalAmountTableViewCell.swift in Sources */,
 				2E9C125A2600529400A5E306 /* UITableViewCell+Convinience.swift in Sources */,
 				2E0898592603CBC600F3862C /* UITableView+Helper.swift in Sources */,
 				2E9C12562600529400A5E306 /* UITableView+Convinience.swift in Sources */,

@@ -32,11 +32,16 @@ class InvoicePaymentViewModel {
 private extension BackendModel {
     func toViewModel() -> InvoiceCellViewModel {
         let testImage = #imageLiteral(resourceName: "serviceIcon")
+        let period = InvoiceParameters.PeriodModel(startValue: 1234,
+                                                   endValue: 12344,
+                                                   unitTitle: "кВт",
+                                                   total: 1233413)
+        let params1: [InvoiceParameters] = [.period(period), .debit(132), .fee(200), .total(3000400)]
         return InvoiceCellViewModel(id: self.id,
                                     icon: testImage,
                                     title: self.name,
                                     color: .blue,
-                                    parametres: [],
+                                    parametres: params1,
                                     showInvoice: true)
     }
 }

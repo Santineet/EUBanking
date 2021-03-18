@@ -89,12 +89,17 @@
                                     <constraint firstAttribute="height" constant="56" id="v0p-Gn-Hgd"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LOR-lQ-CPE" customClass="ContentSizedTableView" customModule="EUBanking" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="120" width="320" height="0.0"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LOR-lQ-CPE" customClass="ContentSizedTableView" customModule="EUBanking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="320" height="64"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="gtX-1z-mvf"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gtX-1z-mvf"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="KGk-i7-Jjw" id="ajO-jF-CbH"/>
                                     <outlet property="delegate" destination="KGk-i7-Jjw" id="5Ws-Jh-AsT"/>
@@ -110,6 +115,7 @@
                             <constraint firstItem="LOR-lQ-CPE" firstAttribute="leading" secondItem="3bv-uv-WzP" secondAttribute="leading" id="YHJ-aS-hAT"/>
                             <constraint firstItem="LOR-lQ-CPE" firstAttribute="top" secondItem="U4a-sO-eCs" secondAttribute="bottom" id="YIP-gR-gBC"/>
                             <constraint firstItem="U4a-sO-eCs" firstAttribute="leading" secondItem="3bv-uv-WzP" secondAttribute="leading" id="izA-nW-crF"/>
+                            <constraint firstItem="LOR-lQ-CPE" firstAttribute="top" secondItem="U4a-sO-eCs" secondAttribute="bottom" id="pnb-mT-Gn8"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="U4a-sO-eCs" secondAttribute="bottom" id="t2N-88-I5N"/>
                         </constraints>
                         <variation key="default">
