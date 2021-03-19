@@ -16,6 +16,24 @@ class InvoiceTableViewCell: UITableViewCell {
     @IBOutlet weak var checkBoxImageView: UIImageView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var roundedContainerView: UIView! {
+        didSet {
+            roundedContainerView.layer.cornerRadius = 12.0
+            roundedContainerView.layer.borderWidth = 0.7
+            roundedContainerView.layer.masksToBounds = true
+            roundedContainerView.layer.borderColor = UIColor.gray.cgColor
+        }
+    }
+    
+    @IBOutlet weak var showInvoiceView: UIView! {
+        didSet {
+            roundedContainerView.layer.cornerRadius = 12.0
+            roundedContainerView.layer.borderWidth = 0.7
+            roundedContainerView.layer.borderColor = UIColor.gray.cgColor
+        }
+    }
+    
     @IBOutlet weak var parametresTableView: UITableView! {
         didSet {
             parametresTableView.registerNib(forCellClass: PeriodCalculationTableViewCell.self)

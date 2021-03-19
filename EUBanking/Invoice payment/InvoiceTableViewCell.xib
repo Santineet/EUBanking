@@ -199,7 +199,9 @@
                 <outlet property="checkBoxImageView" destination="9mt-v5-0CC" id="cYZ-cg-3VM"/>
                 <outlet property="iconImageView" destination="nLj-nQ-ti9" id="eRu-0U-jgo"/>
                 <outlet property="parametresTableView" destination="LOR-lQ-CPE" id="c5A-Tk-o67"/>
-                <outlet property="parametresTableViewHeightConstraint" destination="YIP-gR-gBC" id="4AL-Gf-gTk"/>
+                <outlet property="parametresTableViewHeightConstraint" destination="gtX-1z-mvf" id="WCU-id-CIq"/>
+                <outlet property="roundedContainerView" destination="3bv-uv-WzP" id="Oke-Pl-LIS"/>
+                <outlet property="showInvoiceView" destination="gPH-XL-Qo2" id="WHG-No-pOj"/>
                 <outlet property="showInvoiceViewConstraint" destination="lRq-1g-2Mb" id="dLE-8A-SsJ"/>
                 <outlet property="titleLabel" destination="QEZ-GR-1wa" id="7oV-yU-XAy"/>
             </connections>
