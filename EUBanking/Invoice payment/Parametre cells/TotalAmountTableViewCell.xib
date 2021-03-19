@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P01-wF-NTM">
-                        <rect key="frame" x="16" y="0.0" width="288" height="92"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
                         <color key="backgroundColor" name="LightBlue"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="92" id="3LT-A5-tE5"/>
@@ -68,8 +68,8 @@
                 <constraints>
                     <constraint firstItem="P01-wF-NTM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Df-cP-jPn"/>
                     <constraint firstItem="IaM-ks-yhr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="2Fp-Ym-7LI"/>
-                    <constraint firstAttribute="trailing" secondItem="P01-wF-NTM" secondAttribute="trailing" constant="16" id="FeT-1L-xPb"/>
-                    <constraint firstItem="P01-wF-NTM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="G7F-Px-hfp"/>
+                    <constraint firstAttribute="trailing" secondItem="P01-wF-NTM" secondAttribute="trailing" id="FeT-1L-xPb"/>
+                    <constraint firstItem="P01-wF-NTM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="G7F-Px-hfp"/>
                     <constraint firstItem="IaM-ks-yhr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Nvw-gm-xpU"/>
                     <constraint firstAttribute="bottom" secondItem="IaM-ks-yhr" secondAttribute="bottom" constant="12" id="Re6-mv-dsr"/>
                     <constraint firstAttribute="trailing" secondItem="IaM-ks-yhr" secondAttribute="trailing" constant="14" id="eHg-I5-ngV"/>

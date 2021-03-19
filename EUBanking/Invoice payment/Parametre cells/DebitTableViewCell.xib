@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpj-Y5-59x">
-                        <rect key="frame" x="16" y="0.0" width="288" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Включить переплату " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgD-Ma-2zO">
                                 <rect key="frame" x="16" y="15" width="126" height="14.5"/>
@@ -33,10 +33,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7z-DP-Nzb">
-                                <rect key="frame" x="223" y="6.5" width="51" height="31"/>
+                                <rect key="frame" x="255" y="6.5" width="51" height="31"/>
                             </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9do-ct-dFu">
-                                <rect key="frame" x="0.0" y="43" width="288" height="1"/>
+                                <rect key="frame" x="0.0" y="43" width="320" height="1"/>
                                 <color key="backgroundColor" name="GrayLight"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Bcg-AI-cP2"/>
@@ -59,10 +59,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Jpj-Y5-59x" secondAttribute="trailing" constant="16" id="DlJ-du-Gdi"/>
+                    <constraint firstAttribute="trailing" secondItem="Jpj-Y5-59x" secondAttribute="trailing" id="DlJ-du-Gdi"/>
                     <constraint firstItem="Jpj-Y5-59x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="JGn-aS-zim"/>
                     <constraint firstAttribute="bottom" secondItem="Jpj-Y5-59x" secondAttribute="bottom" id="gT2-HK-bTS"/>
-                    <constraint firstItem="Jpj-Y5-59x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zRp-cq-2yV"/>
+                    <constraint firstItem="Jpj-Y5-59x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zRp-cq-2yV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
