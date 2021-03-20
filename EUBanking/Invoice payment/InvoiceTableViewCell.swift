@@ -46,6 +46,7 @@ class InvoiceTableViewCell: UITableViewCell {
         didSet {
             parametresTableView.registerNib(forCellClass: PeriodCalculationTableViewCell.self)
             parametresTableView.registerNib(forCellClass: DebitTableViewCell.self)
+            parametresTableView.registerNib(forCellClass: FeeTableViewCell.self)
             parametresTableView.registerNib(forCellClass: TotalAmountTableViewCell.self)
         }
     }
@@ -108,13 +109,13 @@ extension InvoiceTableViewCell: UITableViewDataSource {
             let cell = PeriodCalculationTableViewCell.dequeue(from: tableView, for: indexPath)!
             cell.setup(period: period, delegate: self)
             return cell
-        case .debit(let amount):
+        case .debit(let amount, let state):
             let cell = DebitTableViewCell.dequeue(from: tableView, for: indexPath)!
-            cell.setupCell(debitAmount: amount, enabled: true)
+            cell.setupCell(debitAmount: amount, enabled: state, delegate: self)
             return cell
-        case .fee(let amount):
-            let cell = DebitTableViewCell.dequeue(from: tableView, for: indexPath)!
-            cell.setupCell(debitAmount: amount, enabled: true)
+        case .fee(let amount, let state):
+            let cell = FeeTableViewCell.dequeue(from: tableView, for: indexPath)!
+            cell.setupCell(feeAmount: amount, enabled: state, delegate: self)
             return cell
         case .total(let amount):
             let cell = TotalAmountTableViewCell.dequeue(from: tableView, for: indexPath)!
@@ -140,4 +141,28 @@ extension InvoiceTableViewCell: PeriodCalculationTableViewCellDelegate {
         
     }
     
+}
+
+extension InvoiceTableViewCell: DebitTableViewCellDelegate {
+    func payDebitSwitchDidChange(state: Bool, amount: Int) {
+        guard let index = self.invoice.parametres.firstIndex(where: {
+            if case .debit = $0 { return true
+            } else { return false }
+        }) else { return }
+        
+        invoice.parametres[index] = InvoiceParameters.debit(amount, state)
+        delegate?.updateInvoice(self.invoice)
+    }
+}
+
+extension InvoiceTableViewCell: FeeTableViewCellDelegate {
+    func payFeeSwitchDidChange(state: Bool, amount: Int) {
+        guard let index = self.invoice.parametres.firstIndex(where: {
+            if case .debit = $0 { return true
+            } else { return false }
+        }) else { return }
+        
+        invoice.parametres[index] = InvoiceParameters.fee(amount, state)
+        delegate?.updateInvoice(self.invoice)
+    }
 }

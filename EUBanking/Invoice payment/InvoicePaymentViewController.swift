@@ -17,8 +17,8 @@ enum InvoiceParameters {
     }
     case invoice(Int)
     case period(PeriodModel)
-    case debit(Int)
-    case fee(Int)
+    case debit(Int, Bool)
+    case fee(Int, Bool)
     case total(Int)
 }
 

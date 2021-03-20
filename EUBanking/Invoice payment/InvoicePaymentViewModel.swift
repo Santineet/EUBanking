@@ -37,7 +37,7 @@ private extension BackendModel {
                                                    unitTitle: "кВт",
                                                    unitPrice: 100,
                                                    total: 1233413)
-        let params1: [InvoiceParameters] = [.period(period), .debit(132), .fee(200), .total(3000400)]
+        let params1: [InvoiceParameters] = [.period(period), .debit(132, false), .fee(200, true), .total(3000400)]
         return InvoiceCellViewModel(id: self.id,
                                     parametres: params1,
                                     icon: testImage,

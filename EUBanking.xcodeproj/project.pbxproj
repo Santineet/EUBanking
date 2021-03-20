@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,6 +44,8 @@
 		2E9C1263260053FA00A5E306 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C1262260053FA00A5E306 /* UIColor+Extension.swift */; };
 		2E9C1266260057B600A5E306 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C1265260057B600A5E306 /* ContainerView.swift */; };
 		2E9C12692600636B00A5E306 /* PaymentsConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C12682600636B00A5E306 /* PaymentsConfirmationViewModel.swift */; };
+		2EADAD542605F9840008E6F8 /* FeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EADAD522605F9840008E6F8 /* FeeTableViewCell.swift */; };
+		2EADAD552605F9840008E6F8 /* FeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EADAD532605F9840008E6F8 /* FeeTableViewCell.xib */; };
 		924A63E507FD8723AEC2433C /* Pods_EUBanking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D3F3142F5626E7CAFEA373 /* Pods_EUBanking.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		2E9C1262260053FA00A5E306 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		2E9C1265260057B600A5E306 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		2E9C12682600636B00A5E306 /* PaymentsConfirmationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsConfirmationViewModel.swift; sourceTree = "<group>"; };
+		2EADAD522605F9840008E6F8 /* FeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeTableViewCell.swift; sourceTree = "<group>"; };
+		2EADAD532605F9840008E6F8 /* FeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeTableViewCell.xib; sourceTree = "<group>"; };
 		808E2CEAEBBEF515ECBB9F1E /* Pods-EUBanking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EUBanking.release.xcconfig"; path = "Target Support Files/Pods-EUBanking/Pods-EUBanking.release.xcconfig"; sourceTree = "<group>"; };
 		E6D3F3142F5626E7CAFEA373 /* Pods_EUBanking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EUBanking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +129,8 @@
 				2E9C123525FFC95F00A5E306 /* PeriodCalculationTableViewCell.xib */,
 				2E9C123B25FFD85E00A5E306 /* DebitTableViewCell.swift */,
 				2E9C123C25FFD85E00A5E306 /* DebitTableViewCell.xib */,
+				2EADAD522605F9840008E6F8 /* FeeTableViewCell.swift */,
+				2EADAD532605F9840008E6F8 /* FeeTableViewCell.xib */,
 				2E9C124025FFDA7B00A5E306 /* TotalAmountTableViewCell.swift */,
 				2E9C124125FFDA7B00A5E306 /* TotalAmountTableViewCell.xib */,
 			);
@@ -261,7 +267,6 @@
 				230D4442F7EAC0CA674E9AB3 /* Pods-EUBanking.debug.xcconfig */,
 				808E2CEAEBBEF515ECBB9F1E /* Pods-EUBanking.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -328,6 +333,7 @@
 				2E0897EE26012F4500F3862C /* InvoiceTableViewCell.xib in Resources */,
 				2E9C123E25FFD85E00A5E306 /* DebitTableViewCell.xib in Resources */,
 				2E9C120025FFC05F00A5E306 /* LaunchScreen.storyboard in Resources */,
+				2EADAD552605F9840008E6F8 /* FeeTableViewCell.xib in Resources */,
 				2E9C11FD25FFC05F00A5E306 /* Assets.xcassets in Resources */,
 				2E0898342603BEB200F3862C /* Invoice.storyboard in Resources */,
 				2E9C121A25FFC27100A5E306 /* PaidServiceCollapseControllCell.xib in Resources */,
@@ -406,6 +412,7 @@
 				2E9C12572600529400A5E306 /* UITableViewHeaderFooterView+Convinience.swift in Sources */,
 				2E9C11F625FFC05D00A5E306 /* SceneDelegate.swift in Sources */,
 				2E0898372603BF0F00F3862C /* InvoicePaymentViewModel.swift in Sources */,
+				2EADAD542605F9840008E6F8 /* FeeTableViewCell.swift in Sources */,
 				2E9C125C2600529400A5E306 /* UICollectionReusableView+Autosizing.swift in Sources */,
 				2E9C12582600529400A5E306 /* TableShimmerCell.swift in Sources */,
 				2E08985A2603CBC600F3862C /* UITableViewCell+Helper.swift in Sources */,

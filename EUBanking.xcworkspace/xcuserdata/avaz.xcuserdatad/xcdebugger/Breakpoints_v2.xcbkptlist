@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9C5C71B4-4EBA-4426-A8EA-DC59B010AB59"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "1DB82D77-3EE4-40FC-B051-D6E51401C9A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "DA1BDE97-57D4-4FDE-9535-6DAAF9CF36EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
