@@ -7,6 +7,13 @@
 
 import UIKit
 
+protocol InvoiceTableViewCellDelegate {
+    func updateTotalAmount(id: Int, value: Int)
+    func updatePeriod(id: Int, period: InvoiceParameters.PeriodModel)
+    func updateFee(id: Int, value: Bool)
+    func updateDebit(id: Int, value: Bool)
+}
+
 class InvoiceTableViewCell: UITableViewCell {
 
     var invoice: InvoiceCellViewModel!
@@ -34,7 +41,7 @@ class InvoiceTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var parametresTableView: UITableView! {
+    @IBOutlet weak var parametresTableView: ContentSizedTableView! {
         didSet {
             parametresTableView.registerNib(forCellClass: PeriodCalculationTableViewCell.self)
             parametresTableView.registerNib(forCellClass: DebitTableViewCell.self)
@@ -49,8 +56,16 @@ class InvoiceTableViewCell: UITableViewCell {
     func setupCell(invoice: InvoiceCellViewModel) {
         self.invoice = invoice
         self.titleLabel.text = invoice.title
+       
         setupCollapse()
+
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        tableView?.beginUpdates()
         parametresTableView.reloadData()
+        tableView?.endUpdates()
     }
     
     func setupCollapse() {

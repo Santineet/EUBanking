@@ -23,7 +23,7 @@ enum InvoiceParameters {
 
 struct InvoiceCellViewModel {
     let id: Int
-    var isSelected = false
+    var isSelected = true
     let icon: UIImage
     let title: String
     let color: UIColor // Добавь сюда градиент
@@ -38,6 +38,7 @@ class InvoicePaymentViewController: UIViewController {
             tableView.estimatedRowHeight = 56
             tableView.rowHeight = UITableView.automaticDimension
             tableView.registerNib(forCellClass: InvoiceTableViewCell.self)
+            tableView.allowsSelection = false
         }
     }
     
