@@ -78,7 +78,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="amountLabel" destination="7Zl-aA-A2f" id="tL2-ZI-isF"/>
+                <outlet property="amountTextField" destination="7Zl-aA-A2f" id="tL2-ZI-isF"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="134.93303571428569"/>
         </tableViewCell>

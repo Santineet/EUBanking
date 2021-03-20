@@ -24,7 +24,7 @@ enum InvoiceParameters {
 
 struct InvoiceCellViewModel {
     let id: Int
-    var isSelected = false
+    var isSelected = true
     var parametres: [InvoiceParameters]
     let icon: UIImage
     let title: String
@@ -55,10 +55,10 @@ class InvoicePaymentViewController: UIViewController {
         tableView.reloadData()
     }
     
-    func getTotal() -> Float {
-        
-        
-        return 1
+    func getTotal() -> Int {
+        let total = invoices.map({ $0.parametres.getTotal() }).reduce(0, +)
+                
+        return total
     }
     
 }
@@ -88,7 +88,7 @@ extension InvoicePaymentViewController: UITableViewDataSource {
         } else {
             let cell = TotalPaymentAmountCell.dequeue(from: tableView, for: indexPath)!
             
-            cell.setupCell()
+            cell.setupCell(amount: getTotal())
             return cell
         }
     }
@@ -102,4 +102,35 @@ extension InvoicePaymentViewController: InvoiceTableViewCellDelegate {
         invoices[index] = updatedInvoice
     }
     
+}
+
+extension Array where Element == InvoiceParameters {
+    func getTotal() -> Int {
+        var total = 0
+        self.forEach { param in
+            switch param {
+            case .total(let amount):
+                total = amount
+            default:
+                break
+            }
+        }
+       
+        return total
+    }
+    
+    func getInvoiceTotal() -> Int {
+        var total = 0
+        self.forEach { param in
+            switch param {
+            case .invoice(let amount):
+                total =  amount
+            default:
+                break
+            }
+        }
+       
+        return total
+    }
+
 }

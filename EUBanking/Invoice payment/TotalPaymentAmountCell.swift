@@ -11,7 +11,7 @@ class TotalPaymentAmountCell: UITableViewCell {
  
     @IBOutlet private weak var payButton: UIButton!
     
-    func setupCell(amount: Float) {
+    func setupCell(amount: Int) {
         payButton.setTitle("\(amount) T", for: .normal)
     }
 }

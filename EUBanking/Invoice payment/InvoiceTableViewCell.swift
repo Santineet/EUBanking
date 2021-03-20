@@ -124,6 +124,12 @@ extension InvoiceTableViewCell: UITableViewDataSource {
         case .total(let amount):
             let cell = TotalAmountTableViewCell.dequeue(from: tableView, for: indexPath)!
             cell.setupCell(amount: amount)
+            cell.amoundChanged = { [weak self] (amount) in
+                guard let `self` = self else { return }
+                self.invoice.parametres[indexPath.row] = .total(amount)
+                self.delegate?.updateInvoice(self.invoice)
+            }
+            
             return cell
         case .invoice(_):
             return UITableViewCell()
