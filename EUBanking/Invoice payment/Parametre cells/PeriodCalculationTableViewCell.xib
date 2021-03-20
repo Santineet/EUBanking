@@ -189,6 +189,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLabel" destination="Tef-bU-0fo" id="Fdo-3U-QyC"/>
+                <outlet property="amountUnitLabel" destination="2Wd-fH-NQG" id="0TM-g9-R4S"/>
+                <outlet property="endValueTextField" destination="QIz-24-Ci9" id="akJ-Co-I1d"/>
+                <outlet property="startValueTextField" destination="Rft-MR-b8M" id="RC5-Hh-tRv"/>
+            </connections>
             <point key="canvasLocation" x="234.78260869565219" y="53.571428571428569"/>
         </tableViewCell>
     </objects>

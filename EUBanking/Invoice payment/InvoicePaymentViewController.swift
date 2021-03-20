@@ -9,10 +9,11 @@ import UIKit
 
 enum InvoiceParameters {
     struct PeriodModel {
-        let startValue: Int
-        let endValue: Int
+        var startValue: Int
+        var endValue: Int
         let unitTitle: String
-        let total: Int
+        let unitPrice: Int
+        var total: Int
     }
     case invoice(Int)
     case period(PeriodModel)
@@ -24,10 +25,10 @@ enum InvoiceParameters {
 struct InvoiceCellViewModel {
     let id: Int
     var isSelected = true
+    var parametres: [InvoiceParameters]
     let icon: UIImage
     let title: String
     let color: UIColor // Добавь сюда градиент
-    let parametres: [InvoiceParameters]
     let showInvoice: Bool
 }
 
@@ -72,8 +73,18 @@ extension InvoicePaymentViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = InvoiceTableViewCell.dequeue(from: tableView, for: indexPath)!
-        cell.setupCell(invoice: invoices[indexPath.row])
+        cell.setupCell(invoice: invoices[indexPath.row], delegate: self)
         return cell
     }
 
+}
+
+extension InvoicePaymentViewController: InvoiceTableViewCellDelegate {
+    func updateInvoice(_ updatedInvoice: InvoiceCellViewModel) {
+        guard let index = self.invoices.firstIndex(where: { $0.id == updatedInvoice.id }) else {
+            return
+        }
+        invoices[index] = updatedInvoice
+    }
+    
 }

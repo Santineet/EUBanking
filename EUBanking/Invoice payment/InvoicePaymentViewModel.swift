@@ -35,13 +35,14 @@ private extension BackendModel {
         let period = InvoiceParameters.PeriodModel(startValue: 1234,
                                                    endValue: 12344,
                                                    unitTitle: "кВт",
+                                                   unitPrice: 100,
                                                    total: 1233413)
         let params1: [InvoiceParameters] = [.period(period), .debit(132), .fee(200), .total(3000400)]
         return InvoiceCellViewModel(id: self.id,
+                                    parametres: params1,
                                     icon: testImage,
                                     title: self.name,
                                     color: .blue,
-                                    parametres: params1,
                                     showInvoice: true)
     }
 }

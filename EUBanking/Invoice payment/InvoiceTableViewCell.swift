@@ -7,16 +7,17 @@
 
 import UIKit
 
-protocol InvoiceTableViewCellDelegate {
-    func updateTotalAmount(id: Int, value: Int)
-    func updatePeriod(id: Int, period: InvoiceParameters.PeriodModel)
-    func updateFee(id: Int, value: Bool)
-    func updateDebit(id: Int, value: Bool)
+protocol InvoiceTableViewCellDelegate: class {
+//    func updateTotalAmount(id: Int, value: Int)
+//    func updatePeriod(id: Int, period: InvoiceParameters.PeriodModel)
+//    func updateFee(id: Int, value: Bool)
+//    func updateDebit(id: Int, value: Bool)
+    
+    func updateInvoice(_ updatedInvoice: InvoiceCellViewModel)
 }
 
 class InvoiceTableViewCell: UITableViewCell {
 
-    var invoice: InvoiceCellViewModel!
     @IBOutlet weak var parametresTableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showInvoiceViewConstraint: NSLayoutConstraint!
    
@@ -49,12 +50,16 @@ class InvoiceTableViewCell: UITableViewCell {
         }
     }
     
+    var invoice: InvoiceCellViewModel!
+    weak var delegate: InvoiceTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    func setupCell(invoice: InvoiceCellViewModel) {
+    func setupCell(invoice: InvoiceCellViewModel, delegate: InvoiceTableViewCellDelegate) {
         self.invoice = invoice
+        self.delegate = delegate
         self.titleLabel.text = invoice.title
        
         setupCollapse()
@@ -101,6 +106,7 @@ extension InvoiceTableViewCell: UITableViewDataSource {
         switch invoice.parametres[indexPath.row] {
         case .period(let period):
             let cell = PeriodCalculationTableViewCell.dequeue(from: tableView, for: indexPath)!
+            cell.setup(period: period, delegate: self)
             return cell
         case .debit(let amount):
             let cell = DebitTableViewCell.dequeue(from: tableView, for: indexPath)!
@@ -120,6 +126,18 @@ extension InvoiceTableViewCell: UITableViewDataSource {
        
     }
     
-    
+}
+
+extension InvoiceTableViewCell: PeriodCalculationTableViewCellDelegate {
+    func periodDidUpdate(period: InvoiceParameters.PeriodModel) {
+        guard let index = self.invoice.parametres.firstIndex(where: {
+            if case .period = $0 { return true
+            } else { return false }
+        }) else { return }
+        
+        invoice.parametres[index] = InvoiceParameters.period(period)
+        delegate?.updateInvoice(self.invoice)
+        
+    }
     
 }
