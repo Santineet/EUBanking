@@ -36,9 +36,10 @@ class InvoiceTableViewCell: UITableViewCell {
     
     @IBOutlet weak var showInvoiceView: UIView! {
         didSet {
-            roundedContainerView.layer.cornerRadius = 12.0
-            roundedContainerView.layer.borderWidth = 0.7
-            roundedContainerView.layer.borderColor = UIColor.gray.cgColor
+            showInvoiceView.layer.masksToBounds = true
+            showInvoiceView.layer.cornerRadius = 8.0
+            showInvoiceView.layer.borderWidth = 0.7
+            showInvoiceView.layer.borderColor = UIColor.gray.cgColor
         }
     }
     
