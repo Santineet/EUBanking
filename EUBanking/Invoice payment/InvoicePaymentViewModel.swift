@@ -26,7 +26,7 @@ class InvoicePaymentViewModel {
     func getInvoices() -> [InvoiceCellViewModel] {
         mockBackendModels.map { $0.toViewModel() }
     }
-    
+        
 }
 
 private extension BackendModel {

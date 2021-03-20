@@ -70,9 +70,9 @@ class InvoiceTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        tableView?.beginUpdates()
-        parametresTableView.reloadData()
-        tableView?.endUpdates()
+//        tableView?.beginUpdates()
+//        parametresTableView.reloadData()
+//        tableView?.endUpdates()
     }
     
     func setupCollapse() {
@@ -83,9 +83,11 @@ class InvoiceTableViewCell: UITableViewCell {
             self.tableView?.beginUpdates()
             self.parametresTableViewHeightConstraint.isActive = !self.invoice.isSelected
             self.showInvoiceViewConstraint.isActive = !self.invoice.isSelected
+            
             self.tableView?.endUpdates()
         }
-       
+        
+        delegate?.updateInvoice(invoice)
     }
     
     @IBAction func headerTapped() {
@@ -101,7 +103,8 @@ extension InvoiceTableViewCell: UITableViewDelegate {
 
 extension InvoiceTableViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        invoice.parametres.count
+        print("updated")
+        return invoice.parametres.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -125,9 +128,7 @@ extension InvoiceTableViewCell: UITableViewDataSource {
         case .invoice(_):
             return UITableViewCell()
         }
-       
     }
-    
 }
 
 extension InvoiceTableViewCell: PeriodCalculationTableViewCellDelegate {
@@ -141,7 +142,6 @@ extension InvoiceTableViewCell: PeriodCalculationTableViewCellDelegate {
         delegate?.updateInvoice(self.invoice)
         
     }
-    
 }
 
 extension InvoiceTableViewCell: DebitTableViewCellDelegate {

@@ -24,7 +24,7 @@ enum InvoiceParameters {
 
 struct InvoiceCellViewModel {
     let id: Int
-    var isSelected = true
+    var isSelected = false
     var parametres: [InvoiceParameters]
     let icon: UIImage
     let title: String
@@ -39,7 +39,9 @@ class InvoicePaymentViewController: UIViewController {
             tableView.estimatedRowHeight = 56
             tableView.rowHeight = UITableView.automaticDimension
             tableView.registerNib(forCellClass: InvoiceTableViewCell.self)
+            tableView.registerNib(forCellClass: TotalPaymentAmountCell.self)
             tableView.allowsSelection = false
+            tableView.tableFooterView = UIView()
         }
     }
     
@@ -51,12 +53,11 @@ class InvoicePaymentViewController: UIViewController {
 
         invoices = viewModel.getInvoices()
         tableView.reloadData()
-        
-
     }
     
-    func getTotal() -> Int {
-       
+    func getTotal() -> Float {
+        
+        
         return 1
     }
     
@@ -67,16 +68,30 @@ extension InvoicePaymentViewController: UITableViewDelegate {
 }
 
 extension InvoicePaymentViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        invoices.count
+        if section == 0 {
+            return invoices.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = InvoiceTableViewCell.dequeue(from: tableView, for: indexPath)!
-        cell.setupCell(invoice: invoices[indexPath.row], delegate: self)
-        return cell
+        if indexPath.section == 0 {
+            let cell = InvoiceTableViewCell.dequeue(from: tableView, for: indexPath)!
+            cell.setupCell(invoice: invoices[indexPath.row], delegate: self)
+            return cell
+        } else {
+            let cell = TotalPaymentAmountCell.dequeue(from: tableView, for: indexPath)!
+            
+            cell.setupCell()
+            return cell
+        }
     }
-
 }
 
 extension InvoicePaymentViewController: InvoiceTableViewCellDelegate {
