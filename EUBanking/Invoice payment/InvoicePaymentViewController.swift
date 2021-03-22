@@ -116,6 +116,23 @@ extension Array where Element == InvoiceParameters {
     }
 
     func calculateTotal() -> Int {
-        return 10
+        var totalAmount = 0
+        for param in self {
+            switch param {
+            case .period(let period):
+                let units = period.endValue - period.startValue
+                let price = units * period.unitPrice
+                totalAmount += Swift.max(0, price)
+            case .debit(let amount, let included):
+                totalAmount += included ? amount : 0
+            case .fee(let amount, let included):
+                totalAmount += included ? amount : 0
+            case .total(_):
+                break
+            case .invoice(let amount):
+                totalAmount = amount
+            }
+        }
+        return totalAmount
     }
 }

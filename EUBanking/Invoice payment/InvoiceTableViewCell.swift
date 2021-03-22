@@ -80,13 +80,15 @@ class InvoiceTableViewCell: UITableViewCell {
         guard let index = self.invoice.parametres.firstIndex(where: {
             if case .total = $0 { return true } else { return false }
         }) else { return }
-        
-        guard let totalCell = parametresTableView.cellForRow(at: IndexPath(row: index, section: 0)) as? TotalPaymentAmountCell else {
+
+        guard let totalCell = parametresTableView.cellForRow(at: IndexPath(row: index, section: 0)) as? TotalAmountTableViewCell else {
             return
         }
-       
-        totalCell.setupCell(amount: invoice.parametres.calculateTotal())
-    }
+
+        let updatedTotal = invoice.parametres.calculateTotal()
+        amoundChanged(value: updatedTotal)
+        totalCell.setupCell(amount: updatedTotal, delegate: self)
+}
     
     @IBAction func headerTapped() {
         self.invoice.isSelected = !invoice.isSelected
@@ -136,7 +138,7 @@ extension InvoiceTableViewCell: PeriodCalculationTableViewCellDelegate {
         }) else { return }
         
         invoice.parametres[index] = InvoiceParameters.period(period)
-        
+        updateTotalCell()
         delegate?.updateInvoice(self.invoice)
         
     }
@@ -150,17 +152,19 @@ extension InvoiceTableViewCell: DebitTableViewCellDelegate {
         
         invoice.parametres[index] = InvoiceParameters.debit(amount, state)
         delegate?.updateInvoice(self.invoice)
+        updateTotalCell()
     }
 }
 
 extension InvoiceTableViewCell: FeeTableViewCellDelegate {
     func payFeeSwitchDidChange(state: Bool, amount: Int) {
         guard let index = self.invoice.parametres.firstIndex(where: {
-            if case .debit = $0 { return true } else { return false }
+            if case .fee = $0 { return true } else { return false }
         }) else { return }
         
         invoice.parametres[index] = InvoiceParameters.fee(amount, state)
         delegate?.updateInvoice(self.invoice)
+        updateTotalCell()
     }
 }
 

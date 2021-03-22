@@ -68,7 +68,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="debitAmountLabel" destination="938-fR-BCA" id="2Rd-Rv-Mw4"/>
-                <outlet property="paySwitch" destination="E7z-DP-Nzb" id="onH-lM-G8o"/>
+                <outlet property="payDebitSwitch" destination="E7z-DP-Nzb" id="diH-Zc-6pV"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="122.87946428571428"/>
         </tableViewCell>
