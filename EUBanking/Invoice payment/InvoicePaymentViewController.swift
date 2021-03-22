@@ -87,7 +87,6 @@ extension InvoicePaymentViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = TotalPaymentAmountCell.dequeue(from: tableView, for: indexPath)!
-            
             cell.setupCell(amount: getTotal())
             return cell
         }
@@ -106,31 +105,17 @@ extension InvoicePaymentViewController: InvoiceTableViewCellDelegate {
 
 extension Array where Element == InvoiceParameters {
     func getTotal() -> Int {
-        var total = 0
-        self.forEach { param in
+        for param in self {
             switch param {
-            case .total(let amount):
-                total = amount
-            default:
-                break
+            case .total(let amount): return amount
+            case .invoice(let amount): return amount
+            default: break
             }
         }
-       
-        return total
-    }
-    
-    func getInvoiceTotal() -> Int {
-        var total = 0
-        self.forEach { param in
-            switch param {
-            case .invoice(let amount):
-                total =  amount
-            default:
-                break
-            }
-        }
-       
-        return total
+        return 0
     }
 
+    func calculateTotal() -> Int {
+        return 10
+    }
 }

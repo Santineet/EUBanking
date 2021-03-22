@@ -8,11 +8,6 @@
 import UIKit
 
 protocol InvoiceTableViewCellDelegate: class {
-//    func updateTotalAmount(id: Int, value: Int)
-//    func updatePeriod(id: Int, period: InvoiceParameters.PeriodModel)
-//    func updateFee(id: Int, value: Bool)
-//    func updateDebit(id: Int, value: Bool)
-    
     func updateInvoice(_ updatedInvoice: InvoiceCellViewModel)
 }
 
@@ -63,31 +58,34 @@ class InvoiceTableViewCell: UITableViewCell {
         self.invoice = invoice
         self.delegate = delegate
         self.titleLabel.text = invoice.title
-       
+        parametresTableView.reloadData()
         setupCollapse()
 
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-//        tableView?.beginUpdates()
-//        parametresTableView.reloadData()
-//        tableView?.endUpdates()
     }
     
     func setupCollapse() {
-       
-        UIView.animate(withDuration: 0.3) {
-            self.checkBoxImageView.image = self.invoice.isSelected ? #imageLiteral(resourceName: "checkBoxOn") : #imageLiteral(resourceName: "checkBoxOff")
-
-            self.tableView?.beginUpdates()
-            self.parametresTableViewHeightConstraint.isActive = !self.invoice.isSelected
-            self.showInvoiceViewConstraint.isActive = !self.invoice.isSelected
-            
-            self.tableView?.endUpdates()
-        }
+        self.checkBoxImageView.image = self.invoice.isSelected ? #imageLiteral(resourceName: "checkBoxOn") : #imageLiteral(resourceName: "checkBoxOff")
+        self.tableView?.beginUpdates()
+        self.parametresTableViewHeightConstraint.isActive = !self.invoice.isSelected
+        self.showInvoiceViewConstraint.isActive = !self.invoice.isSelected
+        self.tableView?.endUpdates()
         
-        delegate?.updateInvoice(invoice)
+    }
+    
+    func updateTotalCell() {
+        guard let index = self.invoice.parametres.firstIndex(where: {
+            if case .total = $0 { return true } else { return false }
+        }) else { return }
+        
+        guard let totalCell = parametresTableView.cellForRow(at: IndexPath(row: index, section: 0)) as? TotalPaymentAmountCell else {
+            return
+        }
+       
+        totalCell.setupCell(amount: invoice.parametres.calculateTotal())
     }
     
     @IBAction func headerTapped() {
@@ -123,13 +121,7 @@ extension InvoiceTableViewCell: UITableViewDataSource {
             return cell
         case .total(let amount):
             let cell = TotalAmountTableViewCell.dequeue(from: tableView, for: indexPath)!
-            cell.setupCell(amount: amount)
-            cell.amoundChanged = { [weak self] (amount) in
-                guard let `self` = self else { return }
-                self.invoice.parametres[indexPath.row] = .total(amount)
-                self.delegate?.updateInvoice(self.invoice)
-            }
-            
+            cell.setupCell(amount: amount, delegate: self)
             return cell
         case .invoice(_):
             return UITableViewCell()
@@ -140,11 +132,11 @@ extension InvoiceTableViewCell: UITableViewDataSource {
 extension InvoiceTableViewCell: PeriodCalculationTableViewCellDelegate {
     func periodDidUpdate(period: InvoiceParameters.PeriodModel) {
         guard let index = self.invoice.parametres.firstIndex(where: {
-            if case .period = $0 { return true
-            } else { return false }
+            if case .period = $0 { return true } else { return false }
         }) else { return }
         
         invoice.parametres[index] = InvoiceParameters.period(period)
+        
         delegate?.updateInvoice(self.invoice)
         
     }
@@ -153,8 +145,7 @@ extension InvoiceTableViewCell: PeriodCalculationTableViewCellDelegate {
 extension InvoiceTableViewCell: DebitTableViewCellDelegate {
     func payDebitSwitchDidChange(state: Bool, amount: Int) {
         guard let index = self.invoice.parametres.firstIndex(where: {
-            if case .debit = $0 { return true
-            } else { return false }
+            if case .debit = $0 { return true } else { return false }
         }) else { return }
         
         invoice.parametres[index] = InvoiceParameters.debit(amount, state)
@@ -165,11 +156,22 @@ extension InvoiceTableViewCell: DebitTableViewCellDelegate {
 extension InvoiceTableViewCell: FeeTableViewCellDelegate {
     func payFeeSwitchDidChange(state: Bool, amount: Int) {
         guard let index = self.invoice.parametres.firstIndex(where: {
-            if case .debit = $0 { return true
-            } else { return false }
+            if case .debit = $0 { return true } else { return false }
         }) else { return }
         
         invoice.parametres[index] = InvoiceParameters.fee(amount, state)
         delegate?.updateInvoice(self.invoice)
     }
+}
+
+extension InvoiceTableViewCell: TotalAmountTableViewCellDelegate {
+    func amoundChanged(value: Int) {
+        guard let index = self.invoice.parametres.firstIndex(where: {
+            if case .total = $0 { return true} else { return false }
+        }) else { return }
+        self.invoice.parametres[index] = .total(value)
+        self.delegate?.updateInvoice(self.invoice)
+    }
+    
+    
 }
