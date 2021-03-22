@@ -44,6 +44,7 @@ class InvoiceTableViewCell: UITableViewCell {
             parametresTableView.registerNib(forCellClass: DebitTableViewCell.self)
             parametresTableView.registerNib(forCellClass: FeeTableViewCell.self)
             parametresTableView.registerNib(forCellClass: TotalAmountTableViewCell.self)
+            parametresTableView.registerNib(forCellClass: InvoiceAmountTableViewCell.self)
         }
     }
     
@@ -125,8 +126,10 @@ extension InvoiceTableViewCell: UITableViewDataSource {
             let cell = TotalAmountTableViewCell.dequeue(from: tableView, for: indexPath)!
             cell.setupCell(amount: amount, delegate: self)
             return cell
-        case .invoice(_):
-            return UITableViewCell()
+        case .invoice(let amount):
+            let cell = InvoiceAmountTableViewCell.dequeue(from: tableView, for: indexPath)!
+            cell.setupCell(amount: amount)
+            return cell
         }
     }
 }

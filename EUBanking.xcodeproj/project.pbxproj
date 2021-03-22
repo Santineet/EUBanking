@@ -15,6 +15,8 @@
 		2E0898372603BF0F00F3862C /* InvoicePaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0898362603BF0F00F3862C /* InvoicePaymentViewModel.swift */; };
 		2E0898592603CBC600F3862C /* UITableView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0898572603CBC600F3862C /* UITableView+Helper.swift */; };
 		2E08985A2603CBC600F3862C /* UITableViewCell+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0898582603CBC600F3862C /* UITableViewCell+Helper.swift */; };
+		2E5BF2AC2608DA66000DAB45 /* InvoiceAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BF2AA2608DA66000DAB45 /* InvoiceAmountTableViewCell.swift */; };
+		2E5BF2AD2608DA66000DAB45 /* InvoiceAmountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BF2AB2608DA66000DAB45 /* InvoiceAmountTableViewCell.xib */; };
 		2E9C11F425FFC05D00A5E306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C11F325FFC05D00A5E306 /* AppDelegate.swift */; };
 		2E9C11F625FFC05D00A5E306 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C11F525FFC05D00A5E306 /* SceneDelegate.swift */; };
 		2E9C11FD25FFC05F00A5E306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C11FC25FFC05F00A5E306 /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		2E0898362603BF0F00F3862C /* InvoicePaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicePaymentViewModel.swift; sourceTree = "<group>"; };
 		2E0898572603CBC600F3862C /* UITableView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Helper.swift"; sourceTree = "<group>"; };
 		2E0898582603CBC600F3862C /* UITableViewCell+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Helper.swift"; sourceTree = "<group>"; };
+		2E5BF2AA2608DA66000DAB45 /* InvoiceAmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceAmountTableViewCell.swift; sourceTree = "<group>"; };
+		2E5BF2AB2608DA66000DAB45 /* InvoiceAmountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceAmountTableViewCell.xib; sourceTree = "<group>"; };
 		2E9C11F025FFC05D00A5E306 /* EUBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EUBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9C11F325FFC05D00A5E306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E9C11F525FFC05D00A5E306 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				2EADAD532605F9840008E6F8 /* FeeTableViewCell.xib */,
 				2E9C124025FFDA7B00A5E306 /* TotalAmountTableViewCell.swift */,
 				2E9C124125FFDA7B00A5E306 /* TotalAmountTableViewCell.xib */,
+				2E5BF2AA2608DA66000DAB45 /* InvoiceAmountTableViewCell.swift */,
+				2E5BF2AB2608DA66000DAB45 /* InvoiceAmountTableViewCell.xib */,
 			);
 			path = "Parametre cells";
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E9C123725FFC95F00A5E306 /* PeriodCalculationTableViewCell.xib in Resources */,
+				2E5BF2AD2608DA66000DAB45 /* InvoiceAmountTableViewCell.xib in Resources */,
 				2E0897EE26012F4500F3862C /* InvoiceTableViewCell.xib in Resources */,
 				2E9C123E25FFD85E00A5E306 /* DebitTableViewCell.xib in Resources */,
 				2E9C120025FFC05F00A5E306 /* LaunchScreen.storyboard in Resources */,
@@ -387,6 +394,7 @@
 				2EADAD542605F9840008E6F8 /* FeeTableViewCell.swift in Sources */,
 				2E9C125C2600529400A5E306 /* UICollectionReusableView+Autosizing.swift in Sources */,
 				2E9C12582600529400A5E306 /* TableShimmerCell.swift in Sources */,
+				2E5BF2AC2608DA66000DAB45 /* InvoiceAmountTableViewCell.swift in Sources */,
 				2E08985A2603CBC600F3862C /* UITableViewCell+Helper.swift in Sources */,
 				2E9C125E2600529400A5E306 /* CollectionShimmerCell.swift in Sources */,
 				2E0897ED26012F4500F3862C /* InvoiceTableViewCell.swift in Sources */,

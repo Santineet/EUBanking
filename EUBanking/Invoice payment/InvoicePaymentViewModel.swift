@@ -38,8 +38,13 @@ private extension BackendModel {
                                                    unitPrice: 100,
                                                    total: 1233413)
         let params1: [InvoiceParameters] = [.period(period), .debit(132, false), .fee(200, true), .total(3000400)]
+        let params2: [InvoiceParameters] = [.period(period), .debit(132, false), .total(3000400)]
+        let params3: [InvoiceParameters] = [.period(period), .total(3000400)]
+        let params4: [InvoiceParameters] = [.invoice(10000)]
+        
+        let params = [params1, params2, params3, params4]
         return InvoiceCellViewModel(id: self.id,
-                                    parametres: params1,
+                                    parametres: params.randomElement()!,
                                     icon: testImage,
                                     title: self.name,
                                     color: .blue,
