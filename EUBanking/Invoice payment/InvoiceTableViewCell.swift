@@ -93,6 +93,7 @@ class InvoiceTableViewCell: UITableViewCell {
     
     @IBAction func headerTapped() {
         self.invoice.isSelected = !invoice.isSelected
+        delegate?.updateInvoice(self.invoice)
         setupCollapse()
     }
     

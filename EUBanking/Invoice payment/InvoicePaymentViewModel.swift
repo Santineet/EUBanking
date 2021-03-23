@@ -44,7 +44,7 @@ private extension BackendModel {
         
         let params = [params1, params2, params3, params4]
         return InvoiceCellViewModel(id: self.id,
-                                    parametres:params1,  // params.randomElement()!,
+                                    parametres: params.randomElement()!,
                                     icon: testImage,
                                     title: self.name,
                                     color: .blue,
